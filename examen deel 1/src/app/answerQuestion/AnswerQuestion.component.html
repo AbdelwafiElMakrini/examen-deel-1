@@ -1,0 +1,26 @@
+<div class='container'>
+    <h1>Recepten database</h1>
+
+    <form (ngSubmit)='onSubmit()'>
+
+        <div class='form-group' [formGroup]='search'>
+            <label for='name'>naam: </label><br>
+            <input type='text' formControlName='name'> <br>
+
+            <label for='aantal'> aantal caloriën:</label><br>
+            <input type='number' formControlName='aantal'> <br>
+
+            <label for='ingre'>ingrediënten:</label><br>
+            <input type='text' formControlName='ingre'> <br>
+
+            <label for='tijd'>benodigde tijd: (min) </label><br>
+            <input type='number' formControlName='tijd'> <br>
+        </div>
+        <br/>
+        <button type='submit' class='btn btn-success'>toevoegen</button>
+
+    </form>
+    <br/><br/>
+
+    <label>lijst recepten :&nbsp;</label>{{ result_answer }}<br/>
+</div>
